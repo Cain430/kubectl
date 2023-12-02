@@ -1,0 +1,22 @@
+cat <<EOF | kubectl apply -f -
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deno-rest-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: deno-rest-api
+  template:
+    metadata:
+      labels:
+        app: deno-rest-api
+    spec:
+      containers:
+      - name: deno-rest-api
+        image: tag  denoapp
+        ports:
+        - containerPort: 8080 
+EOF
+

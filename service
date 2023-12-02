@@ -1,0 +1,14 @@
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Service
+metadata:
+  name: deno-rest-api-service
+spec:
+  selector:
+    app: deno-rest-api
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: ClusterIP
+EOF
