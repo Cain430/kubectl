@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: http://127.0.0.1:5000  #kan njmsh flask jarbtha w atytha adminator privelage khidmt ama maamltsh deployment donc tnjm tbd (yourapidoamain.com)
+  - host: http://127.0.0.1:5000  #kan njmsh flask jarbtha w atytha adminastrator privelage khidmt ama maamltsh deployment donc tnjm tbd (yourapidoamain.com)
     http:
       paths:
       - path: /
